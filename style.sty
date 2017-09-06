@@ -1,0 +1,21 @@
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\usepackage{fontspec}
+\setmainfont{Roboto}
+
+% remove page numbers
+\pagenumbering{gobble}
+% remove gaps before enumerations
+\usepackage{enumitem}
+\setitemize{topsep=0pt}
+
+\usepackage{todonotes}
+
+% Put notes at the end of the document
+\usepackage{enotez}
+\let\footnote=\endnote
+% make the notes be prefaced by a line with small par separation
+\DeclareInstance{enotez-list}{plain}{paragraph}{
+    heading = \par\noindent\rule{10em}{0.2pt},
+    notes-sep = 0.1pt
+}
